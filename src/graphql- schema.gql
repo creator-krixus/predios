@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Predio {
+  """id of the property"""
+  id: String!
+  avaluo: Int!
+  nombre: String!
+  departamento: String!
+  municipio: String!
+}
+
+type Query {
+  GetPredios: [Predio!]!
+  GetPredio(id: String!): Predio!
+}
+
+type Mutation {
+  createPredio(createPredioInput: CreatePredioInput!): Predio!
+  updatePredio(updatePredioInput: CreatePredioInput!): Predio!
+  removePredio(id: String!): Predio!
+}
+
+input CreatePredioInput {
+  """id of the user"""
+  id: String!
+  avaluo: Int!
+  nombre: String!
+  departamento: String!
+  municipio: String!
+}
